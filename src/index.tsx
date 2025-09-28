@@ -1,6 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import BookingList from './BookingList';
 import BookingForm from './BookingForm';
 
@@ -10,7 +10,7 @@ if (container) {
   root.render(
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div>Welcome to Booking App</div>} />
+        <Route path="/" element={<Navigate to="/booking/list" />} />
         <Route path="/booking/list" element={<BookingList />} />
         <Route path="/booking/form" element={<BookingForm />} />
       </Routes>
