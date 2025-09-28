@@ -15,7 +15,7 @@ module.exports = (env) => {
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
-      publicPath: isProduction ? '/' : 'auto',
+      publicPath: isProduction ? 'https://micro-booking.netlify.app/' : 'http://localhost:3002/',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js'],
